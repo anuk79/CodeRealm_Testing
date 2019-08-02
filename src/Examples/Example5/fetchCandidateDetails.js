@@ -1,22 +1,14 @@
-
 export const fetchCandidateDetails = async () => {
-  try {
-    const response = await fetch(
-      '/api/get-candidate-details',
-      {
-        'method': 'GET',
-        headers: {
-          'Content-Type': 'application/json; charset=utf-8',
-          'accept': 'application/json'
-        }
-      }
-    );
-    if (!response.ok) {
-      throw new Error(response.status);
-    } else {
-      return response.json();
+  const response = await fetch("/api/get-candidate-details", {
+    method: "GET",
+    headers: {
+      "Content-Type": "application/json; charset=utf-8",
+      accept: "application/json"
     }
-  } catch (error) {
-    throw new Error(error);
+  });
+  if (!response.ok) {
+    throw new Error();
+  } else {
+    return response.json();
   }
-}
+};
