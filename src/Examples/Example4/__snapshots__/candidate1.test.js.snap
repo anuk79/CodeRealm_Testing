@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Candidate component should call fetchCandidateDetails 1`] = `
+<LoadingSpinner
+  customClassName="candidate-loading-spinner"
+/>
+`;
+
+exports[`Candidate component should render correctly when data is isDataFetching 1`] = `
+<LoadingSpinner
+  customClassName="candidate-loading-spinner"
+/>
+`;
+
+exports[`Candidate component should render correctly when no error and data isDataFetching is done 1`] = `
+<CandidateView
+  userDetails={
+    Object {
+      "name": "test name",
+    }
+  }
+/>
+`;
+
+exports[`Candidate component should render correctly when some error 1`] = `
+<div
+  className="candidate-error"
+>
+  Some error occurred. Please try again later.
+</div>
+`;

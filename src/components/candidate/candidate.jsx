@@ -3,10 +3,10 @@
 // vendors
 import React from 'react';
 
-const UserView = (props) => {
+const CandidateView = (props) => {
     return (
         <React.Fragment>
-            <h3>{'User Details:'}</h3>
+            <h3>{'Candidate Details:'}</h3>
             <div>
                 <label>{'First Name: '}</label>
                 <span>{props.userDetails.firstName}</span>
@@ -19,4 +19,4 @@ const UserView = (props) => {
     );
 }
 
-export default UserView;
+export default CandidateView;

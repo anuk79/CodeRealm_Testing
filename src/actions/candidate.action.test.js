@@ -5,50 +5,50 @@ import thunk from 'redux-thunk';
 
 // actions
 import {
-  fetchUserDetailsRequest,
-  fetchUserDetailsSuccess,
-  fetchUserDetailsError,
-  fetchUserDetails
-} from './user.action';
+  fetchCandidateDetailsRequest,
+  fetchCandidateDetailsSuccess,
+  fetchCandidateDetailsError,
+  fetchDetails
+} from './candidate.action';
 
 const middlewares = [thunk];
 const mockStore = configureMockStore(middlewares);
 
-describe.skip('User action', () => {
-  it('should call fetchUserDetailsRequest', async () => {
-    const result = fetchUserDetailsRequest();
+describe.skip('Candidate action', () => {
+  it('should call fetchCandidateDetailsRequest', async () => {
+    const result = fetchCandidateDetailsRequest();
     expect(result).toEqual({
-      type: 'FETCH_USER_DETAILS_REQUEST'
+      type: 'FETCH_CANDIDATE_DETAILS_REQUEST'
     });
   });
 
-  it('should call fetchUserDetailsSuccess', async () => {
+  it('should call fetchCandidateDetailsSuccess', async () => {
     const testResponse = {
       data: 'testData'
     }
-    const result = fetchUserDetailsSuccess(testResponse);
+    const result = fetchCandidateDetailsSuccess(testResponse);
     expect(result).toEqual({
-      type: 'FETCH_USER_DETAILS_SUCCESS',
+      type: 'FETCH_CANDIDATE_DETAILS_SUCCESS',
       payload: { response: testResponse }
     });
   });
 
-  it('should call fetchUserDetailsError', async () => {
+  it('should call fetchCandidateDetailsError', async () => {
     const testError = {
       message: 'test internal server error'
     }
-    const result = fetchUserDetailsError(testError);
+    const result = fetchCandidateDetailsError(testError);
     expect(result).toEqual({
-      type: 'FETCH_USER_DETAILS_ERROR',
+      type: 'FETCH_CANDIDATE_DETAILS_ERROR',
       payload: { error: testError }
     });
   });
 
-  it('fetchUserDetails should call success action', () => {
+  it('fetchDetails should call success action', () => {
     const store = mockStore();
     const response = 'test response';
 
-    let res = fetchUserDetailsSuccess(response);
+    let res = fetchCandidateDetailsSuccess(response);
 
     window.fetch = jest.fn().mockImplementation(() => ({
       ok: true,
@@ -60,23 +60,23 @@ describe.skip('User action', () => {
     }));
 
     return store
-      .dispatch(fetchUserDetails())
+      .dispatch(fetchDetails())
       .then(result => {
         expect(result.type).toEqual(res.type);
         expect(res.payload.response).toEqual('test response');
       });
   });
 
-  it('fetchUserDetails should call error action', () => {
+  it('fetchDetails should call error action', () => {
     const store = mockStore();
-    let res = fetchUserDetailsError();
+    let res = fetchCandidateDetailsError();
     window.fetch = jest.fn().mockImplementation(() => ({
       ok: false,
       error: {}
     }));
 
     return store
-      .dispatch(fetchUserDetails({}))
+      .dispatch(fetchDetails({}))
       .catch(error => {
         expect(error).toEqual(res);
       });

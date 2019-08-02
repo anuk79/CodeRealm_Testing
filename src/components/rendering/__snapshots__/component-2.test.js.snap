@@ -14,7 +14,7 @@ exports[`Component Two should render correctly when error in props 1`] = `
   <input
     onChange={[Function]}
     type="text"
-    value="test user name"
+    value="test candidate name"
   />
   <span
     className="error-message"

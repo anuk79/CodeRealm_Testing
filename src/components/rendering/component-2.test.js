@@ -17,7 +17,7 @@ describe.skip("Component Two", () => {
 
     it("should render correctly when error in props", () => {
         const wrapper = shallow(<ComponentTwo 
-            username='test user name' 
+            username='test candidate name' 
             isError={true} 
             errorMessage='test error message' 
         />);

@@ -16,9 +16,9 @@ describe.skip("Component One", () => {
         expect(wrapper.find('label').exists()).toBeTruthy();
         expect(wrapper.find('.username').exists()).toBeTruthy();
         expect(wrapper.find('ComponentTwo').exists()).toBeTruthy();
-        expect(wrapper.find('ComponentTwo').prop('errorMessage')).toEqual('invalid user');
-        expect(wrapper.find('ComponentTwo').props().errorMessage).toEqual('invalid user');
-        expect(wrapper.find('ComponentTwo').props().errorMessage).toBe('invalid user');
+        expect(wrapper.find('ComponentTwo').prop('errorMessage')).toEqual('invalid candidate');
+        expect(wrapper.find('ComponentTwo').props().errorMessage).toEqual('invalid candidate');
+        expect(wrapper.find('ComponentTwo').props().errorMessage).toBe('invalid candidate');
     });
     
     it("should render correctly with children", () => {

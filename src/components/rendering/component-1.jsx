@@ -16,12 +16,12 @@ const ComponentOne = () => {
             <h1>{'Test heading'}</h1>
             <div className="username">
                 <label>
-                    {'Username'}
+                    {'Candidatename'}
                 </label>
                 <ComponentTwo 
-                    username="testUser" 
+                    username="testCandidate" 
                     isError={false} 
-                    errorMessage='invalid user'
+                    errorMessage='invalid candidate'
                     handleChange={handleChange}
                 />
             </div>

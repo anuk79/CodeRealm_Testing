@@ -1,8 +1,8 @@
 
-export const getUserDetails = async () => {
+export const fetchCandidateDetails = async () => {
   try {
     const response = await fetch(
-      '/api/get-user-details',
+      '/api/get-candidate-details',
       {
         'method': 'GET',
         headers: {

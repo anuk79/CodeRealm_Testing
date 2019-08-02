@@ -9,13 +9,13 @@ exports[`Component One should render correctly 1`] = `
     className="username"
   >
     <label>
-      Username
+      Candidatename
     </label>
     <ComponentTwo
-      errorMessage="invalid user"
+      errorMessage="invalid candidate"
       handleChange={[Function]}
       isError={false}
-      username="testUser"
+      username="testCandidate"
     />
   </div>
 </Fragment>
@@ -30,18 +30,18 @@ exports[`Component One should render correctly with children 1`] = `
     className="username"
   >
     <label>
-      Username
+      Candidatename
     </label>
     <ComponentTwo
-      errorMessage="invalid user"
+      errorMessage="invalid candidate"
       handleChange={[Function]}
       isError={false}
-      username="testUser"
+      username="testCandidate"
     >
       <input
         onChange={[Function]}
         type="text"
-        value="testUser"
+        value="testCandidate"
       />
     </ComponentTwo>
   </div>

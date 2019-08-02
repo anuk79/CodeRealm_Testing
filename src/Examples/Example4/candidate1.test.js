@@ -5,7 +5,7 @@ import { shallow } from 'enzyme';
 import { shallowToJson } from 'enzyme-to-json';
 
 // components
-import User from './user';
+import Candidate from './candidate';
 
 // mocking react redux library
 jest.mock('react-redux', () => ({
@@ -16,41 +16,41 @@ jest.mock('react-redux', () => ({
     }
 }));
 
-describe('User component', () => {
-    const mockFetchUserDetails = jest.fn();
+describe('Candidate component', () => {
+    const mockFetchCandidateDetails = jest.fn();
     let wrapper;
 
     beforeEach(() => {
-        wrapper = shallow(<User fetching={true} fetchUserDetails={mockFetchUserDetails}
+        wrapper = shallow(<Candidate isDataFetching={true} fetchCandidateDetails={mockFetchCandidateDetails}
         />);
     });
-    it('should call fetchUserDetails', () => {
+    it('should call fetchCandidateDetails', () => {
         expect(shallowToJson(wrapper)).toMatchSnapshot();
-        expect(mockFetchUserDetails).toBeCalled();
+        expect(mockFetchCandidateDetails).toBeCalled();
     });
     
-    it('should render correctly when data is fetching', () => {
+    it('should render correctly when data is isDataFetching', () => {
         expect(shallowToJson(wrapper)).toMatchSnapshot();
         expect(wrapper.find('LoadingSpinner').length).toBe(1);
     });
 
     it('should render correctly when some error', () => {
         wrapper.setProps({
-            fetching: false,
-            errorFlag: true
+            isDataFetching: false,
+            hasError: true
         });
         expect(shallowToJson(wrapper)).toMatchSnapshot();
-        expect(wrapper.find('.user-error').length).toBe(1);
+        expect(wrapper.find('.candidate-error').length).toBe(1);
     });
 
-    it('should render correctly when no error and data fetching is done', () => {
+    it('should render correctly when no error and data isDataFetching is done', () => {
         wrapper.setProps({
-            fetching: false,
-            errorFlag: false,
+            isDataFetching: false,
+            hasError: false,
             userDetails: { name: 'test name' }
         })
         expect(shallowToJson(wrapper)).toMatchSnapshot();
-        expect(wrapper.find('UserView').length).toBe(1);
-        expect(wrapper.find('UserView').prop('userDetails')).toEqual({ name: 'test name' });
+        expect(wrapper.find('CandidateView').length).toBe(1);
+        expect(wrapper.find('CandidateView').prop('userDetails')).toEqual({ name: 'test name' });
     });
 });

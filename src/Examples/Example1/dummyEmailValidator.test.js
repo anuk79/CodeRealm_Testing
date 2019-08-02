@@ -1,5 +1,5 @@
 
-import { emailValidator } from './emailValidator';
+import { emailValidator } from './dummyEmailValidator';
 
 describe('emailValidator', () => {
   it('should return true for valid email with single @ and single dot', () => {

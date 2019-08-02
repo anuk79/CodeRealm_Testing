@@ -1,8 +1,8 @@
 // resolvers
-import { getUserDetails } from './user.resolver';
+import { fetchCandidateDetails } from './fetchCandidateDetails';
 
-describe('User resolver', () => {
-  it('should return result when api call for userDetails succeeds', () => {
+describe('Candidate resolver', () => {
+  it('should return result when api call succeeds', () => {
     const mockResult = {
       response: 'test response'
     };
@@ -17,15 +17,15 @@ describe('User resolver', () => {
         })
     }));
 
-    return expect(getUserDetails()).resolves.toEqual(mockResult);
+    return expect(fetchCandidateDetails()).resolves.toEqual(mockResult);
   });
 
-  it('should throw error when api call for userDetails fails', async () => {
+  it('should throw error when api call fails', async () => {
     window.fetch = jest.fn().mockImplementation(() => ({
       ok: false,
       status: 404
     }));
 
-    await expect(getUserDetails()).rejects.toThrow('Error: 404');
+    await expect(fetchCandidateDetails()).rejects.toThrow('Error: 404');
   });
 });

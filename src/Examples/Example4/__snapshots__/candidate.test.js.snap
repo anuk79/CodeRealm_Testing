@@ -1,14 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`User component should render correctly when data is fetching 1`] = `
+exports[`Candidate component should render correctly when data is isDataFetching 1`] = `
 <LoadingSpinner
-  customClassName="user-loading-spinner"
+  customClassName="candidate-loading-spinner"
 />
 `;
 
-exports[`User component should render correctly when no error and data fetching is done 1`] = `
-<User
-  fetchUserDetails={
+exports[`Candidate component should render correctly when no error and data isDataFetching is done 1`] = `
+<Candidate
+  fetchCandidateDetails={
     [MockFunction] {
       "calls": Array [
         Array [],
@@ -38,11 +38,11 @@ exports[`User component should render correctly when no error and data fetching 
   }
   userDetails={Object {}}
 >
-  <UserView
+  <CandidateView
     userDetails={Object {}}
   >
     <h3>
-      User Details:
+      Candidate Details:
     </h3>
     <div>
       <label>
@@ -56,13 +56,13 @@ exports[`User component should render correctly when no error and data fetching 
       </label>
       <span />
     </div>
-  </UserView>
-</User>
+  </CandidateView>
+</Candidate>
 `;
 
-exports[`User component should render correctly when some error 1`] = `
+exports[`Candidate component should render correctly when some error 1`] = `
 <div
-  className="user-error"
+  className="candidate-error"
 >
   Some error occurred. Please try again later.
 </div>
