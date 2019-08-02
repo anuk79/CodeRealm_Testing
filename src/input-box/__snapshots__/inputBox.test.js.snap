@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`InputBox component should render correctly 1`] = `
+<div>
+  <label>
+    Enter your name
+  </label>
+  <input
+    onChange={[Function]}
+    type="text"
+    value=""
+  />
+  <button
+    disabled=""
+  >
+     Submit 
+  </button>
+  <div>
+    <Component />
+  </div>
+</div>
+`;

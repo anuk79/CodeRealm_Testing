@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`A component should MOUNT correctly 1`] = `
+<A>
+  <B>
+    <C>
+      <div>
+        This is component "C"
+      </div>
+    </C>
+  </B>
+</A>
+`;
+
+exports[`A component should SHALLOW render correctly 1`] = `
+<B>
+  This is component "A"
+</B>
+`;

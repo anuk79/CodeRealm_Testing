@@ -1,0 +1,69 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`User component should render correctly when data is fetching 1`] = `
+<LoadingSpinner
+  customClassName="user-loading-spinner"
+/>
+`;
+
+exports[`User component should render correctly when no error and data fetching is done 1`] = `
+<User
+  fetchUserDetails={
+    [MockFunction] {
+      "calls": Array [
+        Array [],
+        Array [],
+        Array [],
+        Array [],
+      ],
+      "results": Array [
+        Object {
+          "isThrow": false,
+          "value": undefined,
+        },
+        Object {
+          "isThrow": false,
+          "value": undefined,
+        },
+        Object {
+          "isThrow": false,
+          "value": undefined,
+        },
+        Object {
+          "isThrow": false,
+          "value": undefined,
+        },
+      ],
+    }
+  }
+  userDetails={Object {}}
+>
+  <UserView
+    userDetails={Object {}}
+  >
+    <h3>
+      User Details:
+    </h3>
+    <div>
+      <label>
+        First Name: 
+      </label>
+      <span />
+    </div>
+    <div>
+      <label>
+        Last Name: 
+      </label>
+      <span />
+    </div>
+  </UserView>
+</User>
+`;
+
+exports[`User component should render correctly when some error 1`] = `
+<div
+  className="user-error"
+>
+  Some error occurred. Please try again later.
+</div>
+`;
