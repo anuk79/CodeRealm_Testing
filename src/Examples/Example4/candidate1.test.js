@@ -47,10 +47,10 @@ describe('Candidate component', () => {
         wrapper.setProps({
             isDataFetching: false,
             hasError: false,
-            userDetails: { name: 'test name' }
+            candidateDetails: { name: 'test name' }
         })
         expect(shallowToJson(wrapper)).toMatchSnapshot();
         expect(wrapper.find('CandidateView').length).toBe(1);
-        expect(wrapper.find('CandidateView').prop('userDetails')).toEqual({ name: 'test name' });
+        expect(wrapper.find('CandidateView').prop('candidateDetails')).toEqual({ name: 'test name' });
     });
 });

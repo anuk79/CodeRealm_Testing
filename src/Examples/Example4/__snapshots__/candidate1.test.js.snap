@@ -14,7 +14,7 @@ exports[`Candidate component should render correctly when data is isDataFetching
 
 exports[`Candidate component should render correctly when no error and data isDataFetching is done 1`] = `
 <CandidateView
-  userDetails={
+  candidateDetails={
     Object {
       "name": "test name",
     }

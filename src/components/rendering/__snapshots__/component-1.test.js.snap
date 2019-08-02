@@ -6,7 +6,7 @@ exports[`Component One should render correctly 1`] = `
     Test heading
   </h1>
   <div
-    className="username"
+    className="candidatename"
   >
     <label>
       Candidatename
@@ -15,7 +15,7 @@ exports[`Component One should render correctly 1`] = `
       errorMessage="invalid candidate"
       handleChange={[Function]}
       isError={false}
-      username="testCandidate"
+      candidatename="testCandidate"
     />
   </div>
 </Fragment>
@@ -27,7 +27,7 @@ exports[`Component One should render correctly with children 1`] = `
     Test heading
   </h1>
   <div
-    className="username"
+    className="candidatename"
   >
     <label>
       Candidatename
@@ -36,7 +36,7 @@ exports[`Component One should render correctly with children 1`] = `
       errorMessage="invalid candidate"
       handleChange={[Function]}
       isError={false}
-      username="testCandidate"
+      candidatename="testCandidate"
     >
       <input
         onChange={[Function]}

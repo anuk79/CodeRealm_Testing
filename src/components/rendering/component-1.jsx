@@ -14,12 +14,12 @@ const ComponentOne = () => {
     return (
         <React.Fragment>
             <h1>{'Test heading'}</h1>
-            <div className="username">
+            <div className="candidatename">
                 <label>
                     {'Candidatename'}
                 </label>
                 <ComponentTwo 
-                    username="testCandidate" 
+                    candidatename="testCandidate" 
                     isError={false} 
                     errorMessage='invalid candidate'
                     handleChange={handleChange}

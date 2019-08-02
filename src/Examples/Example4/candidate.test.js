@@ -38,10 +38,10 @@ describe('Candidate component', () => {
 
     it('should render correctly when no error and data isDataFetching is done', () => {
         const wrapper = mount(<Candidate 
-            userDetails={{}} 
+            candidateDetails={{}} 
             fetchCandidateDetails={mockFetchCandidateDetails}
         />);
         expect(shallowToJson(wrapper)).toMatchSnapshot();
-        expect(wrapper.find('CandidateView').prop('userDetails')).toEqual({});
+        expect(wrapper.find('CandidateView').prop('candidateDetails')).toEqual({});
     });
 });

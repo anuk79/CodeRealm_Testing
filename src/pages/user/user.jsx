@@ -13,7 +13,7 @@ import LoadingSpinner from '../../components/loading-spinner/loading-spinner';
 import { fetchDetails } from '../../actions/candidate.action';
 
 const mapStateToProps = state => ({
-    userDetails: state.candidate.userDetails,
+    candidateDetails: state.candidate.candidateDetails,
     isDataFetching: state.candidate.isDataFetching,
     hasError: state.candidate.hasError
 });
@@ -27,7 +27,7 @@ export class Candidate extends Component {
     }
 
     render() {
-        const { isDataFetching, userDetails, hasError } = this.props;
+        const { isDataFetching, candidateDetails, hasError } = this.props;
         let content;
         if(isDataFetching) {
             content = <LoadingSpinner customClassName="candidate-loading-spinner" />
@@ -38,7 +38,7 @@ export class Candidate extends Component {
                 </div>
             );
         } else {
-            content = <CandidateView userDetails={userDetails} />
+            content = <CandidateView candidateDetails={candidateDetails} />
         }
         return content;
     }

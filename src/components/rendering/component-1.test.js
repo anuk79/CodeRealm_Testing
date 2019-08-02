@@ -14,7 +14,7 @@ describe.skip("Component One", () => {
         expect(wrapper.find('h1').exists()).toBeTruthy();
         expect(wrapper.find('h1').length).toBe(1);
         expect(wrapper.find('label').exists()).toBeTruthy();
-        expect(wrapper.find('.username').exists()).toBeTruthy();
+        expect(wrapper.find('.candidatename').exists()).toBeTruthy();
         expect(wrapper.find('ComponentTwo').exists()).toBeTruthy();
         expect(wrapper.find('ComponentTwo').prop('errorMessage')).toEqual('invalid candidate');
         expect(wrapper.find('ComponentTwo').props().errorMessage).toEqual('invalid candidate');
@@ -27,7 +27,7 @@ describe.skip("Component One", () => {
         expect(wrapper.find('h1').exists()).toBeTruthy();
         expect(wrapper.find('h1').length).toBe(1);
         expect(wrapper.find('label').exists()).toBeTruthy();
-        expect(wrapper.find('.username').exists()).toBeTruthy();
+        expect(wrapper.find('.candidatename').exists()).toBeTruthy();
         expect(wrapper.find('ComponentTwo').exists()).toBeTruthy();
     });
 
