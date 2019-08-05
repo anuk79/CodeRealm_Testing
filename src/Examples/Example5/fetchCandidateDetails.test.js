@@ -6,7 +6,7 @@ describe.skip("Fetch candidate details", () => {
       response: "test response"
     };
 
-    fetch = jest.fn().mockImplementationOnce(() => ({
+    window.fetch = jest.fn().mockImplementationOnce(() => ({
       ok: true,
       json: () =>
         new Promise(resolve => {
@@ -17,7 +17,7 @@ describe.skip("Fetch candidate details", () => {
     return expect(fetchCandidateDetails()).resolves.toEqual(mockResult);
   });
   it("should throw error when api call fails", async () => {
-    fetch = jest.fn().mockImplementation(
+    window.fetch = jest.fn().mockImplementation(
       () =>
         new Promise((resolve, reject) => {
           reject({});
